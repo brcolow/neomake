@@ -18,6 +18,6 @@ function! neomake:makers#ft#java#mvn()
 	return {
 		 \ 'args': l:args,
          \ 'errorformat':
-                \ '[ERROR]\ %f:[%l\\,%v]\ %m'
+                \ '[ERROR] %f:[%l,%v] %m'
          \ }
 endfunction
