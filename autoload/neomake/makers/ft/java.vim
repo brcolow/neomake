@@ -13,7 +13,7 @@ function! neomake#makers#ft#java#javac()
          \ }
 endfunction
 
-function! neomake:makers#ft#java#mvn()
+function! neomake#makers#ft#java#mvn()
     let l:args = ['package -P fastest']
 	return {
 		 \ 'args': l:args,
