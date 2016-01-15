@@ -130,7 +130,12 @@ function! neomake#utils#MakerFromCommand(shell, command) abort
         let args = ['-c', command]
     else
         " TODO Windows support (at least)
-        throw "Shell not recognized; can't build command"
+		echom shell_name
+		if shell_name ==? "cmd.exe"
+			let args = ['\c', command]
+		else
+			throw "Shell not recognized; can't build command"
+		endif
     endif
     return {
         \ 'exe': a:shell,
